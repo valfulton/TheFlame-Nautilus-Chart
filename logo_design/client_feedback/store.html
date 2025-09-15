@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flame Swag Store - Atlantic and Vine</title>
+    <style>
+        body {
+            font-family: 'Noto Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #006994;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        header img {
+            max-width: 150px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            border: 2px solid #228B22;
+            border-radius: 5px;
+        }
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .form-container input, .form-container textarea, .form-container select {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .form-container button {
+            background-color: #006994;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #006994;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo_design/exports/AV_logo.png" alt="Atlantic and Vine Logo">
+        <h1>The Flame Swag Store</h1>
+        <p>Designed by Atlantic and Vine for Kevin and Maile Lyon's HH50 Catamaran</p>
+    </header>
+    <div class="container">
+        <h2>Swag Mockups</h2>
+        <div class="gallery">
+            <img src="logo_design/mockups/tshirt_mockup.png" alt="Flame T-Shirt">
+            <img src="logo_design/mockups/mug_mockup.png" alt="Flame Mug">
+            <img src="logo_design/mockups/bag_mockup.png" alt="Flame Bag">
+        </div>
+        <h2>Purchase and Feedback</h2>
+        <div class="form-container">
+            <form id="orderForm" action="https://formsubmit.co/Val@atlanticandvine.com" method="POST">
+                <label>Item:</label>
+                <select name="item" required>
+                    <option value="tshirt">T-Shirt ($25)</option>
+                    <option value="mug">Mug ($15)</option>
+                    <option value="bag">Bag ($20)</option>
+                </select>
+                <label>Quantity:</label>
+                <input type="number" name="quantity" min="1" required>
+                <label>Size (for T-Shirt):</label>
+                <select name="size">
+                    <option value="N/A">N/A (Mug/Bag)</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">XL</option>
+                </select>
+                <label>Feedback:</label>
+                <textarea name="feedback" rows="5" placeholder="What do you think of the design?"></textarea>
+                <label>Name:</label>
+                <input type="text" name="name" required>
+                <label>Email:</label>
+                <input type="email" name="email" required>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>Contact: Val Fulton | <a href="mailto:Val@atlanticandvine.com">Val@atlanticandvine.com</a> | 530-282-5228</p>
+        <p><a href="https://atlanticandvine.com">atlanticandvine.com</a></p>
+    </footer>
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            alert('Order submitted! Val will contact you to confirm.');
+        });
+    </script>
+</body>
+</html>
